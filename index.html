@@ -2,7 +2,7 @@
 <!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
 <html>
 <head>
-<title>TODO:Title For Your Game</title>
+<title>Sokoban</title>
 <!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
 <style>
 .figure {
@@ -15,25 +15,35 @@
 </style>
 </head>
 <body>
-<h1>TODO: Title For Your Game</h1>
-<p>TODO: one-sentence summary of your game, highlighting the unique "hook" of the game.</p>
+<h1>Sokoban</h1>
+<p><a href="https://en.wikipedia.org/wiki/Sokoban">Sokoban</a>: player pushes boxes to target storage locations.</p>
 <!-- the <div> wrapping this image centers it on the page. -->
 <!-- TODO: drawing showing the main view of the game during play -->
 <div class="figure">
-<img src="game.png" />
+<img src="sokoban.png" width="30%" />
 </div>
-<p>TODO: more information (2-3 sentences) about gameplay, referring to the image above.</p>
+<p>This game is played on a 8x8 board viewed from above. Tiles on the board may contain walls, boxes and targets. The player uses arrow keys to move. If there is one and only one box ahead of the player, without no walls in the path, player can push the box. Once all the boxes are placed in the target storage locations, a new challenge is randomly generated. As the the number of walls and boxes changes, the game level changes. </p>
 
 <h2>Gameplay</h2>
-<p>TODO: Describe how the game starts, plays (e.g. what are the controls), and ends.</p>
+<p><b>Start:</b> At the start of the game, the player is placed in a random square and a level is randomly generated. The process of level generation is: 1) creating an empty board 2) placing several walls, boxes and targets 3) placing player at the start point. The generation needs to make sure that the puzzle is solvable. </p>
+
 <!-- TODO: illustrate your descriptions with more drawings -->
 <div class="figure">
-<img src="before-reset.png" />
-<img src="after-reset.png" />
+<img src="sokoban-mv.png" width="30%" />
 </div>
 
+<p><b>Movement:</b> Player can press arrow keys to indicate movement direction. If there is no walls or boxes in the next square, player can move freely. If there is one box next to the player, no walls or boxes next to the box, player can push the box to the next square. It is possible that the player will reach an unwinnable state.</p>
+
+<p><b>Finish:</b> Once all the boxes are placed in the target locations, player wins and the next level begins. If the box cannot be pushed to the target, player gets into an unwinnable state and the game may be reset.</p>
+
+<p><b>Drawing:</b> The board is drawn in a flat view. All object colors are randomly generated.</p>
+
 <h2>Assets</h2>
-<p>TODO: Provide a link to any preliminary 3D models, sounds, or <a href="https://github.com/ixchow/amoeba-escape/blob/master/tiles.png">textures</a> for the game. Make sure to only link to assets with appropriate licenses.</p>
+<p><a href="https://opengameart.org/content/sokoban-pack">sokoban pack</a></p>
+<div class="figure">
+<img src="Preview_Sokoban.png" width="40%" />
+</div>
+
 
 </body>
 </html>
